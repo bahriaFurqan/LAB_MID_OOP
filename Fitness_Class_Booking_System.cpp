@@ -135,7 +135,7 @@ void viewAllBookings(const vector<FitnessClass>& classes)
     cout << "All bookings:\n";
     for (int i = 0; i < classes.size(); i++)
     {
-        cout << classes[i].name << ":-\n";
+        cout << classes[i].name<<"  " << classes[i].timeslot << ":-\n";
         for (int j = 0; j < classes[i].bookings.size(); j++)
         {
             cout << j + 1 << "- " << classes[i].bookings[j]->member->name << "\n";
@@ -167,15 +167,21 @@ int main()
 {
     vector<FitnessClass> classes = 
     {
-        FitnessClass("Yoga", 20, "08:00"),
+        FitnessClass("Yoga", 10, "08:00"),
         FitnessClass("Pilates", 15, "10:00"),
         FitnessClass("Zumba", 25, "12:00"),
-        FitnessClass("Yoga", 20, "14:00"),
-        FitnessClass("Pilates", 15, "16:00"),
-        FitnessClass("Zumba", 25, "18:00"),
+        FitnessClass("Yoga", 8, "14:00"),
+        FitnessClass("Pilates", 12, "16:00"),
+        FitnessClass("Zumba", 22, "18:00"),
         FitnessClass("Yoga", 20, "20:00")
     };
-    vector<Member> members = { Member("John"), Member("Jane"), Member("Bob") };
+    vector<Member> members =
+    { 
+        Member("Sami"),
+        Member("Furqan"),
+        Member("Jhanzaib"),
+        Member("Hamza")
+    };
 
     while (true) {
         cout << "\n\n\n";
